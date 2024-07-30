@@ -1,12 +1,10 @@
 /********** Template CSS **********/
 :root {
-  --primary: #d8b384; /* Light Wood */
-  --secondary: #8b5a2b; /* Dark Wood */
-  --light: #f5f5dc; /* Beige */
-  --dark: #000000; /* Black */
-  --accent: #4caf50; /* Greenery */
-  --background: #ffffff; /* White */
-  --muted: #808080; /* Gray */
+  --primary: #b68d40; /* Dark slate gray */
+  --secondary: #e63946; /* Soft red */
+  --light: #f1faee; /* Off white */
+  --dark: #1d3557; /* Dark blue */
+  --accent: #a8dadc; /* Light turquoise */
 }
 
 .back-to-top {
@@ -79,6 +77,7 @@
 .nav-bar.sticky-top {
   position: sticky;
   padding: 0;
+  border-bottom: 1px solid #eeeeee;
   z-index: 9999;
 }
 
