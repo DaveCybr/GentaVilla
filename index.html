@@ -41,27 +41,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Avenir:wght@400;700&display=swap");
-
-      body {
-        font-family: "Avenir", sans-serif;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Bodoni Moda", serif;
-        color: black;
-      }
-      p {
-        font-family: "Avenir", sans-serif;
-      }
-    </style>
   </head>
 
   <body>
@@ -110,23 +89,11 @@
             <div class="navbar-nav ms-auto">
               <a href="#home" class="nav-item nav-link active">Home</a>
               <a href="#about" class="nav-item nav-link">About</a>
-              <a href="#siteplan" class="nav-item nav-link">Siteplan</a>
-              <a href="#villa" class="nav-item nav-link">Villa Tipe</a>
-              <!-- <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu rounded-0 m-0">
-                  <a href="testimonial.html" class="dropdown-item"
-                    >Testimonial</a
-                  >
-                  <a href="404.html" class="dropdown-item">404 Error</a>
-                </div>
-              </div> -->
+              <a href="testimonial.html" class="nav-item nav-link"
+                >Siteplan and Villa</a
+              >
               <a href="#gallery" class="nav-item nav-link">gallery</a>
+              <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
             </div>
           </div>
         </nav>
@@ -185,7 +152,16 @@
           <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                <img class="img-fluid w-100" src="img/carousel-5.png" />
+                <!-- <img class="img-fluid w-100" src="img/carousel-5.png" /> -->
+                <video
+                  id="video"
+                  controls="controls"
+                  preload="none"
+                  class="w-100 img-fluid"
+                  poster="img/thumbnail.png"
+                >
+                  <source id="mp4" src="img/genta_v.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -235,6 +211,11 @@
                 <i class="fa fa-check text-primary me-3"></i>Beautifully
                 landscaped surroundings
               </p>
+              <a
+                href="testimonial.html"
+                class="btn btn-primary py-3 px-5 animated fadeIn"
+                >Details</a
+              >
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div class="about-img position-relative overflow-hidden p-5 pe-0">
@@ -270,7 +251,37 @@
               </div>
             </div>
           </div>
-          <div class="tab-content">
+
+          <div class="real-estate-card">
+            <div class="content">
+              <img
+                src="https://www.figma.com/file/jWIQvt6UFoLlHiXbWvMuZk/image/8b2c332f027de8f4395ff13e3f63fccfda8fb29e"
+                alt="real eastat name"
+              />
+              <h3>Elatia Residential Complex</h3>
+              <p class="address">Kifissia, Greece</p>
+              <div class="info">
+                <div class="item">
+                  <p>Property type:</p>
+                  <p>Villa</p>
+                </div>
+                <div class="item">
+                  <p>Bedrooms:</p>
+                  <p>4</p>
+                </div>
+                <div class="item">
+                  <p>Total area:</p>
+                  <p>200m<sup>2</sup></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="price">
+              <p>€1,250,000</p>
+              <a href="#">Learn more</a>
+            </div>
+          </div>
+          <!-- <div class="tab-content">
             <div id="tab-1" class="tab-pane fade show p-0 active">
               <div class="row g-4">
                 <div
@@ -447,7 +458,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- Siteplan List End -->
@@ -505,7 +516,21 @@
             </p>
           </div>
           <!-- Gallery -->
-          <div id="lightgallery" class="row">
+          <div class="slider-wrapper">
+            <ul class="image-list" style="padding: 0">
+              <img class="image-item" src="img/carousel-3.png" alt="img-3" />
+              <img class="image-item" src="img/carousel-4.png" alt="img-4" />
+              <img class="image-item" src="img/carousel-5.png" alt="img-5" />
+              <img class="image-item" src="img/carousel-6.png" alt="img-6" />
+              <img class="image-item" src="img/carousel-7.png" alt="img-7" />
+            </ul>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+          <!-- <div id="lightgallery" class="row">
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
               <a
                 href="./img/carousel-5.png"
@@ -578,7 +603,7 @@
                 />
               </a>
             </div>
-          </div>
+          </div> -->
           <!-- Gallery -->
         </div>
       </div>
@@ -700,7 +725,7 @@
       <!-- Team End -->
 
       <!-- Testimonial Start -->
-      <div class="container-xxl py-5">
+      <div class="container-xxl py-5" id="testimonial">
         <div class="container">
           <div
             class="text-center mx-auto mb-5 wow fadeInUp"
@@ -938,15 +963,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery.js@2.3.0/modules/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery.js@2.3.0/modules/lg-fullscreen.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery.js@2.3.0/modules/lg-video.min.js"></script>
-    <script>
-      lightGallery(document.getElementById("lightgallery"), {
-        selector: ".gallery-item",
-        thumbnail: true,
-        animateThumb: false,
-        showThumbByDefault: false,
-        subHtmlSelectorRelative: true,
-      });
-    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
   </body>
